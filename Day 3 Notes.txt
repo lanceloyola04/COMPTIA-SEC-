@@ -124,7 +124,7 @@ for f1K
 V2:
 !@put in for snmpV2 CSR1000V
 conf t
-access-list 10 permit 192.168.1.10
+access-list 10 permit 208.8.8.172
 snmp-server community public RO 10
 end
 
