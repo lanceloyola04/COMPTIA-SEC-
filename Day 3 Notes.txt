@@ -68,7 +68,22 @@ conf t
 login on-failure log
 login on-success log
 end
-------------
+-----------
+
+
+config t
+access-list 100 deny ip any host 208.8.8.194 log
+access-list 100 permit ip any any
+interface GigabitEthernet1
+ip access-group 100 in
+
+
+###get back the ping and able to ssh again
+config t
+interface GigabitEthernet0/0
+no ip access-group 100 in
+end
+-------------------------
 *to block url/ip
 
 config t
@@ -92,6 +107,7 @@ end
 
 3rd Tool: Zabbix (Open Source)
 4th Tool: JuumpServer (Open Source)
+5th Tool: Suricata (Open Source)
 
 
 attack.mitre.org
