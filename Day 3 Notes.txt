@@ -109,6 +109,9 @@ end
 
 3rd Tool: Zabbix (Open Source)
 
+username: root
+password: zabbix
+
 
 4th Tool: JumpServer (Open Source)
 
