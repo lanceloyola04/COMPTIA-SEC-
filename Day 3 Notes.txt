@@ -141,8 +141,6 @@ transport input ssh
 end
 
 
-
-
 5th Tool: Suricata (Open Source)
 
 
