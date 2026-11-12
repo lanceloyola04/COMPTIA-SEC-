@@ -69,14 +69,13 @@ login on-failure log
 login on-success log
 end
 -----------
-
-
+*remove ssh
 config t
 access-list 100 deny ip any host 208.8.8.194 log
 access-list 100 permit ip any any
 interface GigabitEthernet1
 ip access-group 100 in
-
+end
 
 ###get back the ping and able to ssh again
 config t
@@ -90,7 +89,7 @@ config t
 NO ip access-list standard NOPORN
 ip access-list standard NOPORN
 DENY 66.254.0.0 0.0.255.255  log
-deny 161.49.0.0 0.0.255.255  log
+DENY 161.49.0.0 0.0.255.255  log
 DENY 104.21.0.0 0.0.255.255  log
 DENY 68.235.0.0 0.0.255.255  log
 DENY 104.17.0.0 0.0.255.255  log
