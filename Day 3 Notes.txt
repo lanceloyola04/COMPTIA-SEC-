@@ -9,7 +9,7 @@ Password: C1sc0123
 systemctl stop firewalld
 ip addr
 
-nmap -v - for checking port of IP Address
+nmap -v - for checking ports of an IP Address
 
 GUI:
 https://208.8.8.42 (IP in my VM)
@@ -18,7 +18,7 @@ Password: C1sc0123..
 
 
 
-2nd Tool: elasticsearch (Open Source)
+2nd Tool: Elasticsearch (Open Source)
 
 Username: root
 Password: C1sc0123
@@ -42,8 +42,11 @@ end
 
 sh ip int bri 
 
+*save configuration
+en
+wr
 ---------------
-f1k in secureCRT:
+f1k in SecureCRT:
 
 conf t
 logging on
@@ -62,14 +65,14 @@ logging enable
 notify syslog
 end
 -------------
-*to know if somebody is bruteforcing
+*to know if somebody is brute-forcing*
 
 conf t
 login on-failure log
 login on-success log
 end
 -----------
-*remove ssh
+*remove SSH
 config t
 access-list 100 deny ip any host 208.8.8.194 log
 access-list 100 permit ip any any
@@ -105,13 +108,22 @@ end
 -------------------
 
 3rd Tool: Zabbix (Open Source)
-4th Tool: JuumpServer (Open Source)
+
+
+4th Tool: JumpServer (Open Source)
+
+username: root
+password: C1sc0123
+
+ip -4 addr
+
+
 5th Tool: Suricata (Open Source)
 
 
 attack.mitre.org
-buy subscription of chatgpt and claude
-train an agent of AI
+Buy a subscription to ChatGPT and Claude
+Train an agent of AI
 
 Claude - Tier 1 and Tier 2 agents
-Chat GPT - Project Manager
+ChatGPT - Project Manager
