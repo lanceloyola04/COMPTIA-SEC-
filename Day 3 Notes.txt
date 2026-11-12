@@ -1,0 +1,102 @@
+Day 3 - Tools
+
+1st Tool: Wazuh (Open Source)
+
+Credentials:
+Username: root
+Password: C1sc0123
+
+systemctl stop firewalld
+ip addr
+
+nmap -v - for checking port of IP Address
+
+GUI:
+https://208.8.8.42 (IP in my VM)
+Username: admin
+Password: C1sc0123..
+
+
+
+2nd Tool: elasticsearch (Open Source)
+
+Username: root
+Password: C1sc0123
+
+systemctl restart elasticsearch.service
+ip addr
+
+GUI:
+http://208.8.8.133:5601
+Username: admin
+Password: C1sc0123
+
+(Cisco Firewall)
+f1k:
+enable
+conf t
+int g1
+ip addr dhcp
+no shut
+end
+
+sh ip int bri 
+
+---------------
+f1k in secureCRT:
+
+conf t
+logging on
+logging host 208.8.8.133 transport udp port 9001
+logging trap informational
+end
+
+ping 208.8.8.133
+---------
+*to know what the user types*
+
+conf t
+archive
+log config
+logging enable
+notify syslog
+end
+-------------
+*to know if somebody is bruteforcing
+
+conf t
+login on-failure log
+login on-success log
+end
+------------
+*to block url/ip
+
+config t
+NO ip access-list standard NOPORN
+ip access-list standard NOPORN
+DENY 66.254.0.0 0.0.255.255  log
+deny 161.49.0.0 0.0.255.255  log
+DENY 104.21.0.0 0.0.255.255  log
+DENY 68.235.0.0 0.0.255.255  log
+DENY 104.17.0.0 0.0.255.255  log
+DENY 88.208.0.0 0.0.255.255  log
+DENY 208.77.0.0 0.0.255.255  log
+DENY 172.67.0.0 0.0.255.255  log
+DENY 172.66.0.0 0.0.255.255  log
+DENY 162.159.0.0 0.0.255.255 log
+Permit Any
+Int Gi 1
+ ip access-group NOPORN in
+end
+-------------------
+
+3rd Tool: Zabbix (Open Source)
+4th Tool: JuumpServer (Open Source)
+
+
+attack.mitre.org
+buy subscription of chatgpt and claude
+train an agent of AI
+
+Claude - Tier 1 and Tier 2 agents
+Chat GPT - Project Manager
