@@ -112,6 +112,28 @@ end
 username: root
 password: zabbix
 
+GUI
+http://208.8.8.172
+username: Admin
+password: zabbix
+
+systemctl restart zabbix-server
+dnf install net-snmp-utils -y
+
+for f1K
+V2:
+!@put in for snmpV2 CSR1000V
+conf t
+access-list 10 permit 192.168.1.10
+snmp-server community public RO 10
+end
+
+V3:
+!@!@ SNMPV3 csr1000v
+conf t
+snmp-server group zabbix v3 priv
+snmp-server user admin zabbix v3 auth sha C1sc0123 priv aes 128 C1sc0123
+end
 
 4th Tool: JumpServer (Open Source)
 
