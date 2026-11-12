@@ -117,6 +117,31 @@ password: C1sc0123
 
 ip -4 addr
 
+GUI:
+http://192.168.102.100:4000
+username: admin
+password: C1sc0123
+
+CMD:
+ping 10.11.1.4
+
+!@COREBABA
+config t
+ip domain-name rivanit.com
+username admin privilege 15 secret pass
+username loyola privilege 15 secret pass
+crypto key generate rsa
+
+How many bits in the modulus [512]: 2048
+
+ip ssh version 2
+line vty 0 14
+login local
+transport input ssh
+end
+
+
+
 
 5th Tool: Suricata (Open Source)
 
