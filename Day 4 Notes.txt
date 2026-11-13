@@ -60,4 +60,35 @@ line vty 0 14
 login authentication default
 end
 
+New Fortinet Credentials: (pre-config)
+default IP address: 192.168.1.99/24
+username: admin
+password: (press enter)
 
+-----------------------------------------------------------------------------------------------------------------
+ponhub.com - 66.254.114.41 / 104.18.29.44
+faketaxi.com - 66.254.114.234
+bangbus.com - 66.254.114.234
+digitalplayground.com - 66.254.114.234
+bangbros.com - 66.254.114.234
+brazzers.com - 66.254.114.234
+66.254.114.0/24
+
+onlyfans.com - 162.159.140.146
+162.159.140.146/32
+
+beeg.com - 104.21.56.86 / 172.67.181.179
+pinayflix.com - 104.21.55.88 / 172.67.146.93
+sulasok.tv - 104.21.34.102
+104.21.0.0/16
+172.67.0.0/16
+
+xvideos.com - 89.222.127.12 / 89.222.127.9
+89.222.127.12/32
+
+vivamax.com - 64.98.135.95
+64.98.135.98/32
+
+
+
+ 
